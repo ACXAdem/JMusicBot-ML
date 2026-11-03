@@ -1,0 +1,40 @@
+JMusicBot-ML (Multi-Language JMusicBot)
+Copyright 2026 JMusicBot-ML contributors
+
+This product is a modified version of the following works, used under the
+Apache License, Version 2.0 (see the LICENSE file):
+
+  JMusicBot — https://github.com/jagrosh/MusicBot
+  Copyright 2016-2018 John Grosh (jagrosh)
+
+  JMusicBot-JP — https://github.com/Cosgy-Dev/JMusicBot-JP
+  Copyright Cosgy Dev
+  (version 0.11.0 is the base of JMusicBot-ML)
+
+The original copyright and license notices are kept in the source files.
+
+Changes made by JMusicBot-ML (summary; full list in CHANGELOG.md):
+  - User interface, config.txt and console messages in 6 languages
+    (English, Turkish, Japanese, German, Spanish, Russian)
+  - Turkish command names
+  - Rewritten Spotify support (track/album/playlist/artist links, no API key needed)
+  - "Now playing" card with control buttons, previous-track history
+  - Lyrics from LRCLIB, YouTube radio/mix expansion (up to 75 tracks)
+  - yt-dlp download fallback, optional YouTube sign-in, cache and log size limits
+  - Bug fixes (see CHANGELOG.md)
+
+Development of JMusicBot-ML was assisted by Claude, an AI assistant made by
+Anthropic (https://claude.ai).
+
+Third-party software bundled in the released jar, each under its own license:
+  JDA (Apache-2.0), JDAVE, Lavaplayer (Apache-2.0), youtube-source (MIT),
+  JLyrics, Logback (EPL-1.0 / LGPL-2.1), SLF4J (MIT), Typesafe Config (Apache-2.0),
+  Apache Commons IO (Apache-2.0), jsoup (MIT), Unirest (MIT), JFiglet (Apache-2.0),
+  msgpack-java (Apache-2.0).
+Please refer to each project for its exact license terms.
+
+yt-dlp (https://github.com/yt-dlp/yt-dlp, Unlicense) is not bundled; it is
+downloaded from its official GitHub releases when the bot starts.
+
+JMusicBot-ML is not affiliated with or endorsed by the authors of the projects above,
+or by YouTube, Spotify or Discord.

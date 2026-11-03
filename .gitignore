@@ -1,0 +1,25 @@
+# Derleme çıktıları
+/target/
+*.jar
+*.iml
+.idea/
+/nbproject/
+nb*.xml
+
+# Botun çalışırken oluşturduğu dosyalar — GİZLİ BİLGİ İÇERİR, ASLA YÜKLEMEYİN
+config.txt
+config.txt.*
+youtube-oauth.txt
+cookies.txt
+serversettings.json
+*.bak
+
+# Botun çalışma klasörleri
+/logs/
+/cache/
+/tmp/
+/bin/
+/Playlists/
+/Mylists/
+/Publist/
+/test/

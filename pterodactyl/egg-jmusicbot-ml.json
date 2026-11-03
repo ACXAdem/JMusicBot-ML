@@ -1,0 +1,42 @@
+{
+    "_comment": "Pterodactyl egg for JMusicBot-ML (multi-language Discord music bot)",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2026-10-28T05:00:00+03:00",
+    "name": "JMusicBot-ML",
+    "author": "jmusicbot-ml@example.com",
+    "description": "Multi-language Discord music bot (based on JMusicBot-JP). Upload JMusicBot-ML.jar with the panel File Manager. Requires Java 25.",
+    "features": null,
+    "docker_images": {
+        "Java 25": "ghcr.io/pterodactyl/yolks:java_25"
+    },
+    "file_denylist": [],
+    "startup": "java -Xms128M -XX:MaxRAMPercentage=75.0 --enable-native-access=ALL-UNNAMED -Dnogui=true -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -jar {{JARFILE}}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Finished Loading!\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!/bin/bash\r\nmkdir -p /mnt/server\r\ncd /mnt/server\r\necho \"JMusicBot-ML setup: upload JMusicBot-ML.jar with the panel File Manager.\"",
+            "container": "ghcr.io/pterodactyl/installers:debian",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Jar file",
+            "description": "Name of the jar file to run.",
+            "env_variable": "JARFILE",
+            "default_value": "JMusicBot-ML.jar",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:64",
+            "field_type": "text"
+        }
+    ]
+}
